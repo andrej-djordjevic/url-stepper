@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "URL Stepper",
+  "version": "1.0.0",
+  "description": "Increment or decrement the last number in the current tab's URL.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "URL Stepper"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "commands": {
+    "step-up": {
+      "suggested_key": { "default": "Alt+Shift+Up" },
+      "description": "Increase the last number in the URL"
+    },
+    "step-down": {
+      "suggested_key": { "default": "Alt+Shift+Down" },
+      "description": "Decrease the last number in the URL"
+    }
+  }
+}
